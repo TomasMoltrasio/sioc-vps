@@ -1,0 +1,48 @@
+version: "3.8"
+
+services:
+  fondado:
+    build: ./fondado
+    container_name: fondado
+    restart: unless-stopped
+    expose:
+      - "3000"
+    env_file:
+      - ./fondado/.env.production
+    environment:
+      - NODE_ENV=production
+    command: sh -c "npm run build && npm start"
+
+  penayo:
+    build: ./penayo
+    container_name: penayo
+    restart: unless-stopped
+    expose:
+      - "3000"
+    env_file:
+      - ./penayo/.env.production
+    environment:
+      - NODE_ENV=production
+    command: sh -c "npm run build && npm start"
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    restart: unless-stopped
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/certs:/etc/letsencrypt
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - fondado
+      - penayo
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./nginx/certs:/etc/letsencrypt
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    entrypoint: /bin/sh
