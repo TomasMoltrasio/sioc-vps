@@ -12,7 +12,7 @@ export const metadata = {
   title: "Fondado Negocios Inmobiliarios",
   description:
     "Bienvenido a Fondado Negocios Inmobiliarios, tu aliado en la compra, venta y alquiler de propiedades.",
-  image: "/logo-fondado.webp",
+  image: "/logo-fondado-nav.webp",
   // ...other metadata
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <meta property="og:title" content="Fondado Negocios Inmobiliarios" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/logo-fondado.webp" />
+        <meta property="og:image" content="/logo-fondado-nav.webp" />
       </head>
       <body className={inter.className}>
         <>

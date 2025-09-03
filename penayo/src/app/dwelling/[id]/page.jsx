@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       type: "website",
       locale: "es_AR",
-      url: `https://penayo.com.ar/dwelling/${id}`,
+      url: `https://penayopropiedades.com.ar/dwelling/${id}`,
       title: product?.dwelling?.address.streetNumber
         ? `${product?.dwelling?.subtype} en ${product?.dwelling?.address.streetName} N°${product?.dwelling?.address.streetNumber}, ${product?.dwelling?.address.city}`
         : `${product?.dwelling?.subtype} en ${product?.dwelling?.address.streetName}, ${product?.dwelling?.address.city}`,
