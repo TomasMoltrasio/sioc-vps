@@ -144,7 +144,7 @@ export default function LogoContact() {
           </p>
           <div className="mt-5">
             <a
-              href="https://g.co/kgs/bWC8rWY"
+              href="https://maps.app.goo.gl/EBEyEhP5TYqUiTm77"
               data-type="iframe"
               target="_blank"
               className="video-play-icon read-more lightbox btn btn-link text-slate-800 hover:text-primary after:bg-green-600 transition duration-500"

@@ -140,11 +140,11 @@ export default function LogoContact() {
         <div className="content mt-7">
           <h5 className="text-slate-900 h5 text-xl font-medium">Dirección</h5>
           <p className="text-slate-900 mt-3">
-            Calle 68 N° 446 La Plata, Buenos Aires
+            Calle 4 N° 799 La Plata, Buenos Aires
           </p>
           <div className="mt-5">
             <a
-              href="https://g.co/kgs/bWC8rWY"
+              href="https://maps.app.goo.gl/7WwWn1FY6LPQ3zZX6"
               data-type="iframe"
               target="_blank"
               className="video-play-icon read-more lightbox btn btn-link text-slate-800 hover:text-primary after:bg-green-600 transition duration-500"

@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="flex flex-col justify-center items-center w-full">
           <span className="footer-title">Dirección</span>
           <a
-            href="https://goo.gl/maps/kBWSa9VeUPjGkK6L6?coh=178572&entry=tt"
+            href="https://maps.app.goo.gl/EBEyEhP5TYqUiTm77"
             target="_blank"
             rel="noopener noreferrer"
             className="link link-hover flex justify-center items-center"

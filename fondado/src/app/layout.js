@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>Fondado Negocios Inmobiliarios</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon-fondado.ico" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <meta property="og:title" content="Fondado Negocios Inmobiliarios" />
         <meta property="og:type" content="website" />
