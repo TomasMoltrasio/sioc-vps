@@ -29,6 +29,29 @@ export default function CardDwelling({ dwelling }) {
   const priceTextColor =
     publicationType === "Alquiler" ? "text-secondary" : "text-primary";
 
+  // Extraer info de la imagen para optimizar con Cloudinary (ejemplo: resize, formato webp)
+  const getOptimizedImageUrl = (
+    url,
+    width = 600,
+    height = 400,
+    quality = 100
+  ) => {
+    // Solo optimiza si es de Cloudinary
+    if (!url.includes("cloudinary.com")) return url;
+    // Busca el segmento de upload/ para insertar transformaciones
+    const parts = url.split("/upload/");
+    if (parts.length !== 2) return url;
+    // Puedes ajustar los parámetros de transformación según tus necesidades
+    const transformation = `f_auto,q_${quality},w_${width},h_${height},c_fill`;
+    return `${parts[0]}/upload/${transformation}/${parts[1]}`;
+  };
+
+  // Función para formatear el precio con puntos como separador de miles
+  const formatPrice = (value) => {
+    if (typeof value !== "number") return value;
+    return value.toLocaleString("es-AR");
+  };
+
   return (
     <Link
       key={siocId}
@@ -37,7 +60,7 @@ export default function CardDwelling({ dwelling }) {
     >
       <div className="relative w-full h-[250px]">
         <Image
-          src={images[0].secure_url}
+          src={getOptimizedImageUrl(images[0].secure_url, 400, 250, 100)}
           alt="dwelling image"
           fill
           className="cover transform transition duration-500 ease-in-out relative"
@@ -106,7 +129,7 @@ export default function CardDwelling({ dwelling }) {
             publicationType === "Alquiler" ? "text-secondary" : "text-primary"
           } me-4`}
         >
-          {currency + price}
+          {currency + formatPrice(price)}
         </span>
       </div>
       <div className="flex justify-end items-end p-2">
