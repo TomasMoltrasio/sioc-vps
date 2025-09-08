@@ -38,6 +38,12 @@ export default async function DwellingContainer({ data }) {
     ""
   );
 
+  // Función para formatear el precio con puntos como separador de miles
+  const formatPrice = (value) => {
+    if (typeof value !== "number") return value;
+    return value.toLocaleString("es-AR");
+  };
+
   return (
     <div className="flex flex-col items-center justify-center w-full">
       {data?.dwelling !== null ? (
@@ -81,7 +87,9 @@ export default async function DwellingContainer({ data }) {
             <div className="flex flex-col items-center justify-end h-full w-full lg:w-1/3 gap-1 p-2">
               {data?.dwelling?.price ? (
                 <h3 className="text-4xl font-semibold text-center lg:text-right w-full text-primary">
-                  {`${data?.dwelling?.currency}${data?.dwelling?.price}`}
+                  {`${data?.dwelling?.currency}${formatPrice(
+                    data?.dwelling?.price
+                  )}`}
                 </h3>
               ) : (
                 <h3 className="text-2xl font-bold text-left text-slate-900">
