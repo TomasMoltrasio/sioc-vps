@@ -4,7 +4,7 @@ import { TbShare } from "react-icons/tb";
 
 export default function ButtonShare() {
   const router = usePathname();
-  const path = `https://penayo.com.ar${router}`;
+  const path = `https://penayopropiedades.com.ar${router}`;
 
   return (
     <div className="tooltip" data-tip="Compartir por Whatsapp">

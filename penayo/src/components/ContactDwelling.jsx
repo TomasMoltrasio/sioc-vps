@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 export default function ContactDwelling({ phone }) {
   const pathname = usePathname();
 
-  const message = `Hola, estoy interesado en el inmueble https://penayo.com.ar${pathname}`;
+  const message = `Hola, estoy interesado en el inmueble https://penayopropiedades.com.ar${pathname}`;
 
   return (
     <>
