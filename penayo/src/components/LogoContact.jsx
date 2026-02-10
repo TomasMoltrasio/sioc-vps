@@ -1,5 +1,5 @@
 import { HiOutlineMail, HiPhone, HiLocationMarker } from "react-icons/hi";
-// import { TbBrandWhatsapp } from "react-icons/tb";
+import { TbBrandWhatsapp } from "react-icons/tb";
 
 export default function LogoContact() {
   return (
