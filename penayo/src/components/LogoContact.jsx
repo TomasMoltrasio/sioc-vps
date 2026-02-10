@@ -29,22 +29,29 @@ export default function LogoContact() {
           <div className="mt-5 flex flex-col items-center justify-center">
             <a
               href="
-            tel:+542216161258"
+            tel:+542214250969"
               className="link link-hover text-slate-800 hover:text-primary after:bg-green-600 transition duration-500"
             >
-              0221 6161258
+              0221 425-0969
             </a>
             <a
               href="
-            tel:+542215560489"
+            tel:+542214250970"
               className="link link-hover text-slate-800 hover:text-primary after:bg-green-600 transition duration-500"
             >
-              0221 5560489
+              0221 425-0970
+            </a>
+            <a
+              href="
+            tel:+542214250971"
+              className="link link-hover text-slate-800 hover:text-primary after:bg-green-600 transition duration-500"
+            >
+              0221 425-0971
             </a>
           </div>
         </div>
       </div>
-      {/* <div className="text-center px-6">
+      <div className="text-center px-6">
         <div className="relative overflow-hidden text-transparent -m-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +90,7 @@ export default function LogoContact() {
             </a>
           </div>
         </div>
-      </div> */}
+      </div>
       <div className="text-center px-6">
         <div className="relative overflow-hidden text-transparent -m-3">
           <svg
